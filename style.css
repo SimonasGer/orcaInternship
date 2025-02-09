@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: crimson;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Main Content */
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px black;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+fieldset{
+    border: none;
+}
+
+/* Input Fields */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    border: solid 1px gray;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: crimson;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: rgb(117, 6, 29);
+}
+
+/* Error Messages */
+.postError, .replyError {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Comments Section */
+.comments {
+    margin-top: 20px;
+}
+
+/* Single Comment */
+.comment {
+    background: #ffffff;
+    border-left: 5px solid crimson;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Section (Author & Time) */
+.comment .top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: crimson;
+    margin-bottom: 5px;
+}
+
+/* Bottom Section (Content) */
+.comment .bottom p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Reply Button (Summary) */
+details summary {
+    cursor: pointer;
+    font-size: 14px;
+    color: crimson;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Reply Form */
+.reply-form {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Replies Section */
+.replies {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+/* Individual Reply */
+.reply {
+    background: #eef2f6;
+    border-left: 3px solid crimson;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+/* Reply Author */
+.reply .top {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Reply Content */
+.reply .bottom p {
+    font-size: 14px;
+}
+.comment, .reply {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
+}
+
+details {
+    transition: all 1s ease-in-out;
+}
+
+details[open] summary ~ * {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Friendly */
+@media only screen and (max-width: 600px) {
+    main {
+        width: 90%;
+        padding: 15px;
+    }
+    .comment {
+        padding: 10px;
+    }
+    .reply {
+        padding: 8px;
+    }
+    button p {
+        font-size: 11px;
+        padding: 8px;
+    }
+}
